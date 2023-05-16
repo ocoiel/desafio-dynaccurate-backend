@@ -64,6 +64,7 @@ CMD ["uvicorn", "src.infrastructure.http.server:app", "--host=0.0.0.0", "--port=
 
 # Stage: production
 FROM python:${PYTHON_VERSION}-slim-bullseye as production
+# FROM nikolaik/python-nodejs:latest as production
 ARG APP_NAME
 ARG APP_PATH
 
@@ -87,8 +88,8 @@ COPY --from=development ${APP_PATH}/requirements.txt ./
 # COPY --from=development ${APP_PATH}/src/infrastructure/database/prisma/schema.prisma ./primsa
 COPY ./.docker/entrypoint.sh ./
 RUN chmod +x ./entrypoint.sh
-COPY ./.docker/wait-for-it.sh ./
-RUN chmod +x ./entrypoint.sh ./wait-for-it.sh
+# COPY ./.docker/wait-for-it.sh ./
+# RUN chmod +x ./entrypoint.sh ./wait-for-it.sh
 
 # Install Node.js and npm
 RUN apt-get update && \
@@ -107,9 +108,9 @@ RUN . /opt/venv/bin/activate
 # ENTRYPOINT ["dockerize", "-wait", "tcp://db:5432", "-timeout", "30s"]
 ENTRYPOINT ["./entrypoint.sh"]
 
-RUN npm install -g prisma
+# RUN npm install -g prisma
 # RUN prisma generate --schema src/infrastructure/database/prisma/schema.prisma
-RUN npx prisma db push --schema src/infrastructure/database/prisma/schema.prisma
+# RUN npx prisma db push --schema src/infrastructure/database/prisma/schema.prisma
 
 COPY --from=staging /usr/local/bin/dockerize /usr/local/bin
 
