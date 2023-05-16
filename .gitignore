@@ -1,3 +1,20 @@
-node_modules
-# Keep environment variables out of version control
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.venv/
+*.csv
+*.parquet
+*.feather
+*.zip
+*.gzip
+*.tar
+*.bin
+*.pkl
+*.pickle
+*.joblib
 .env
+.coverage
