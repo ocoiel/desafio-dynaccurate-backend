@@ -1,4 +1,4 @@
-ARG APP_NAME=lamb
+ARG APP_NAME=dynaccurate
 ARG APP_PATH=/opt/$APP_NAME
 ARG PYTHON_VERSION=3.11.0
 ARG POETRY_VERSION=1.4.2
@@ -53,7 +53,7 @@ RUN poetry export \
     -f requirements.txt \
     --output requirements.txt
 ENTRYPOINT ["poetry", "run"]
-CMD ["uvicorn", "src.infrastructure.http.server:app", "--host=0.0.0.0", "--port=8000"]
+CMD ["uvicorn", "src.infrastructure.http.server:app", "--host=0.0.0.0", "--port=3333"]
 
 # Stage: production
 FROM python:${PYTHON_VERSION}-slim-bullseye as production
@@ -84,4 +84,4 @@ COPY --from=staging /usr/local/bin/dockerize /usr/local/bin
 COPY ./.docker/entrypoint.sh ./
 RUN chmod +x ./entrypoint.sh
 ENTRYPOINT ["dockerize", "-wait", "tcp://db:5432", "-timeout", "30s"]
-CMD ["python", "-m", "uvicorn", "src.infrastructure.http.server:app", "--host=0.0.0.0", "--port=8000"]
+CMD ["python", "-m", "uvicorn", "src.infrastructure.http.server:app", "--host=0.0.0.0", "--port=3333"]
