@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "test2"
+version = "0.1.0"
+description = ""
+authors = ["Gabriel Albuquerque <albuquerque.gabrielc@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.1"
+uvicorn = "^0.22.0"
+pydantic = "^1.10.7"
+prisma = "^0.8.2"
+python-multipart = "^0.0.6"
+fastapi-pagination = "^0.12.3"
+pillow = "^9.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 88
+disable = ["C0114", "C0103", "C0115", "C0116", "R0903"]
+extension-pkg-whitelist = "pydantic"
