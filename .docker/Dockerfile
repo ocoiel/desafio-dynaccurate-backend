@@ -70,7 +70,7 @@ ENV \
     PIP_DISABLE_PIP_VERSION_CHECK=on \
     PIP_DEFAULT_TIMEOUT=100
 
-ENV PORT=8000
+ENV PORT=3333
 
 # Install only production dependencies and run ASGI web server
 WORKDIR $APP_PATH
