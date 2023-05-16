@@ -77,7 +77,11 @@ WORKDIR $APP_PATH
 COPY --from=development ${APP_PATH}/src ./src
 COPY --from=development ${APP_PATH}/.env ./
 COPY --from=development ${APP_PATH}/requirements.txt ./
+# COPY --from=development ${APP_PATH}/src/infrastructure/database/prisma/schema.prisma ./primsa
 RUN pip install -r requirements.txt
+RUN poetry shell
+RUN prisma generate --schema src/infrastructure/database/prisma/schema.prisma
+RUN prisma db push --schema src/infrastructure/database/prisma/schema.prisma
 
 COPY --from=staging /usr/local/bin/dockerize /usr/local/bin
 
