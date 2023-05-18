@@ -2,12 +2,13 @@
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=Desafio&message=Dynaccurate&color=blue&style=for-the-badge"/>
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ocoiel/desafio-dynaccurate-backend?color=blue&logo=TypeScript&logoColor=white&style=for-the-badge">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ocoiel/desafio-dynaccurate-backend?color=blue&logo=Python&logoColor=white&style=for-the-badge">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ocoiel/desafio-dynaccurate-backend?color=blue&style=for-the-badge">
 </p>
 <br>
 
 <p align="center">
+  <a href="https://github.com/ocoiel/desafio-dynaccurate-frontend">Frontend</a> •
   <a href="#tecnologias">Tecnologias</a> •
   <a href="#dynaccurate">O Desafio</a> •
   <a href="#instalação">Instalação</a> •
