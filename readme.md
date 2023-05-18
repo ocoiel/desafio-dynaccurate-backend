@@ -2,8 +2,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=Desafio&message=Dynaccurate&color=blue&style=for-the-badge"/>
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ocoiel/desafio-dynaccurate-frontend?color=blue&logo=TypeScript&logoColor=white&style=for-the-badge">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ocoiel/desafio-dynaccurate-frontend?color=blue&style=for-the-badge">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ocoiel/desafio-dynaccurate-backend?color=blue&logo=TypeScript&logoColor=white&style=for-the-badge">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ocoiel/desafio-dynaccurate-backend?color=blue&style=for-the-badge">
 </p>
 <br>
 
@@ -148,7 +148,7 @@ $ poetry run python3 -m src.infrastructure.http.server
 
 - [x] Usar Clean Architecture
 - [x] Substituir SQLAlchemy (ORM) + Alembic (Migrations) pelo Prisma
-- [ ]Resolver erro do Docker com Prisma
+- [ ] Resolver erro do Docker com Prisma
 - [ ] Adicionar testes unitários e e2e com pytest
 - [ ] Adicionar upload ao AWS S3
 - [ ] Adicionar o design pattern de factories
