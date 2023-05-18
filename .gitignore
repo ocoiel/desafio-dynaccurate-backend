@@ -18,3 +18,4 @@ __pycache__/
 *.joblib
 .env
 .coverage
+uploads/

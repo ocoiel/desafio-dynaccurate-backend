@@ -75,7 +75,7 @@ async def upload_image(medicament_id: str, file: bytes = File(...)):
 
     file_path = f"uploads/{medicament_id}.{extension}"
 
-    image_url = f"http://localhost:3334/{file_path}"
+    image_url = f"http://localhost:3333/{file_path}"
 
     print(f"File path: {file_path}")
 
