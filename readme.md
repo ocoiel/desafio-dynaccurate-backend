@@ -60,7 +60,7 @@ Projeto desenvolvido usando as seguintes tecnologias.
 <br>
 <br>
 
-<img src="./public/dynna2.webp" alt="Dynaccurate logo" />
+<img src="./docs/dynna2.webp" alt="Dynaccurate logo" />
 
 ## Dynaccurate
 
